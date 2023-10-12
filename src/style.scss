@@ -1,0 +1,107 @@
+@mixin btn($color: white) {
+  border: none;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: $color;
+  cursor: pointer;
+}
+
+
+
+// Globals
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  background-color: #EFF;
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.ph-duotone {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  @include btn();
+}
+
+// Video Player
+.video-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: white;
+
+  &.fullscreen {
+    max-width: 100%;
+    width: 100%;
+  }
+  .video {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .video-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background: linear-gradient(to top, rgba(black, 0.2), transparent);
+
+    .timeline-container {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      
+      .timeline {
+        width: 100%;
+        cursor: not-allowed;
+      }
+    }
+    .controls-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &-left {
+          flex-basis: 20%;
+          justify-content: flex-start;
+        }
+        &-center {
+          flex-basis: 60%;
+          justify-content: center;
+        }
+        &-right {
+          flex-basis: 20%;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Player</title>
+</head>
+<body>
+  
+  <!-- <div class="container">
+    <div class="wrapper">
+      <div class="video-timeline">
+        <div class="progress-area">
+          <span>00:00</span>
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+      <ul class="video-controls">
+        <li class="options left">
+          <button class="volume"><i class="ph-duotone ph-speaker-high"></i></button>
+          <input type="range">
+          <div class="video-timer">
+            <span class="current-time">00:00</span>
+            <span class="separator"> / </span>
+            <span class="video-duration">00:00</span>
+          </div>
+        </li>
+        <li class="options center">
+          <button class="skip-backward"><i class="ph-duotone ph-rewind"></i></button>
+          <button class="play-pause"><i class="ph-duotone ph-play"></i></button>
+          <button class="skip-forward"><i class="ph-duotone ph-fast-forward"></i></button>
+        </li>
+        <li class="options right">
+          <button class="playback-speed"><i class="ph-duotone ph-gauge"></i></button>
+          <button class="pic-in-pic"><i class="ph-duotone ph-picture-in-picture"></i></button>
+          <button class="fullscreen"><i class="ph-duotone ph-corners-out"></i></button>
+        </li>
+      </ul>
+    </div>
+    <video src="/video3.mp4"></video>
+  </div> -->
+  <div class="video-container">
+    <video class="video" src="/video.mp4"></video>
+    <div class="video-controls">
+      <div class="timeline-container">
+        <span class="current-time">00:00</span>
+        <input class="timeline" type="range" value="0" disabled>
+        <span class="video-duration">00:00</span>
+      </div>
+      <div class="controls-container">
+        <div class="controls controls-left">
+          <button class="btn playback-speed"><i class="ph-duotone ph-gauge"></i></button>
+          <button class="btn volume"><i class="ph-duotone ph-speaker-high"></i></button>
+        </div>
+        <div class="controls controls-center">
+          <button class="btn skip-backward"><i class="ph-duotone ph-rewind"></i></button>
+          <button class="btn play-pause"><i class="ph-duotone ph-play"></i></button>
+          <button class="btn skip-forward"><i class="ph-duotone ph-fast-forward"></i></button>
+        </div>
+        <div class="controls controls-right">
+          <button class="btn fullscreen"><i class="ph-duotone ph-corners-out"></i></button>
+          <button class="btn pic-in-pic"><i class="ph-duotone ph-picture-in-picture"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
